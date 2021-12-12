@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><Version>0.7.1</Version></PropertyGroup><PropertyGroup><TargetFramework>net6.0</TargetFramework></PropertyGroup><ItemGroup>
+  <PackageReference Include="FluentEmail.Smtp" Version="3.0.0" />
+</ItemGroup>
+</Project>

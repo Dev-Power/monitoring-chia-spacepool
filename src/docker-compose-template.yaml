@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  spacepool-monitor:
+    image: devpowercouk/spacepool-monitor
+    build:
+      context: .
+      dockerfile: SpacePoolMonitor.WorkerService/Dockerfile
+    environment:
+      AppSettings__LauncherId: ""
+      AppSettings__ApiKey: ""
+      AppSettings__UserAgent: ""
+      AppSettings__CheckIntervalInMinutes: 30
+      EmailSettings__FromAddress: ""
+      EmailSettings__ToAddress: ""
+      EmailSettings__Subject: ""
+      EmailSettings__FromName: ""
+      SmtpSettings__Host: ""
+      SmtpSettings__Username: ""
+      SmtpSettings__Password: ""
+      SmtpSettings__Port: 587

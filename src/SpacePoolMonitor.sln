@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacePoolMonitor.WorkerService", "SpacePoolMonitor.WorkerService\SpacePoolMonitor.WorkerService.csproj", "{202CB0F1-CFBB-45E6-AC5B-2723D2545F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacePoolMonitor.ApiClient", "SpacePoolMonitor.ApiClient\src\SpacePoolMonitor.ApiClient\SpacePoolMonitor.ApiClient.csproj", "{32C5878D-6298-4519-B9B9-CF5C1FE1D84F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacePoolMonitor.EmailService", "SpacePoolMonitor.EmailService\SpacePoolMonitor.EmailService.csproj", "{4A031CAF-9561-4ECD-BFB1-8ABFCEB345F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{202CB0F1-CFBB-45E6-AC5B-2723D2545F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202CB0F1-CFBB-45E6-AC5B-2723D2545F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202CB0F1-CFBB-45E6-AC5B-2723D2545F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202CB0F1-CFBB-45E6-AC5B-2723D2545F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C5878D-6298-4519-B9B9-CF5C1FE1D84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C5878D-6298-4519-B9B9-CF5C1FE1D84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C5878D-6298-4519-B9B9-CF5C1FE1D84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C5878D-6298-4519-B9B9-CF5C1FE1D84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A031CAF-9561-4ECD-BFB1-8ABFCEB345F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A031CAF-9561-4ECD-BFB1-8ABFCEB345F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A031CAF-9561-4ECD-BFB1-8ABFCEB345F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A031CAF-9561-4ECD-BFB1-8ABFCEB345F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
