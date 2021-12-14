@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: SpacePoolMonitor.WorkerService/Dockerfile
+    restart: always
     environment:
       AppSettings__LauncherId: ""
       AppSettings__ApiKey: ""
