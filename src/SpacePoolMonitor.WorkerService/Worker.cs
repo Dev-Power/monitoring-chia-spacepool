@@ -25,7 +25,7 @@ public class Worker : BackgroundService
         string userAgent = _settings.UserAgent;
         int interval = _settings.CheckIntervalInMinutes;
         
-        _logger.LogInformation($"Worker started with the following:\n{_settings}");
+        _logger.LogInformation(FormatLogMessage($"Worker started with the following:\n{_settings}"));
         
         while (!stoppingToken.IsCancellationRequested)
         {
@@ -38,7 +38,7 @@ public class Worker : BackgroundService
             
             if (latestSuccessfulSubmission == null)
             {
-                var message = "No verified partials received";
+                var message = FormatLogMessage($"No verified partials received");
                 _logger.LogError(message);
                 await _emailService.SendNotification(message);
                 return;
@@ -49,17 +49,21 @@ public class Worker : BackgroundService
             
             if (timeElapsedSinceLastVerifiedPartial.TotalMinutes >= interval)
             {
-                var message = $"No verified partials in the last {interval} minutes";
+                var message = FormatLogMessage($"No verified partials in the last {interval} minutes");
                 _logger.LogError(message);
                 await _emailService.SendNotification(message);
             }
             else
             {
-                _logger.LogInformation($"Last verified partial received {Math.Floor(timeElapsedSinceLastVerifiedPartial.TotalMinutes)} minutes ago. All looking good.");
+                _logger.LogInformation(FormatLogMessage($"Last verified partial received {Math.Floor(timeElapsedSinceLastVerifiedPartial.TotalMinutes)} minutes ago. All looking good."));
             }
-            
             
             await Task.Delay(interval * 60 * 1000, stoppingToken);
         }
+    }
+
+    private string FormatLogMessage(string message)
+    {
+        return $"[{DateTime.UtcNow.ToString()}] {message}";
     }
 }
